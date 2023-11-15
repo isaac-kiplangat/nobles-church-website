@@ -11,7 +11,7 @@ const BannerTwo = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${process.env.REACT_APP_YOUTUBE_CHANNEL_ID}&maxResults=5&order=date&type=video&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${import.meta.env.VITE_REACT_APP_YOUTUBE_CHANNEL_ID}&maxResults=5&order=date&type=video&key=${import.meta.env.VITE_REACT_APP_YOUTUBE_API_KEY}`
         );
 
         setVideos(response.data.items);
