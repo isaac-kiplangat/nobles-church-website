@@ -23,7 +23,7 @@ const BannerTwo = () => {
     };
 
     fetchData();
-  }, [channelId, apiKey]);
+  }, []);
 
   return (
     <div className='w-4/5 pb-10 mx-auto text-white'>
