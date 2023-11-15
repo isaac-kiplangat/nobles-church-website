@@ -1,6 +1,6 @@
 import React from 'react'
 import {AiOutlineMenu} from 'react-icons/ai'
-import Logo from '../../assets/kingsgate.png'
+import Logo from '../../assets/logo.jpg'
 
 const Navbar = () => {
 
