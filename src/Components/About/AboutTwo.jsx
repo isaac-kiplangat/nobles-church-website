@@ -1,11 +1,11 @@
 import React from 'react'
-import Pastors from  '../../assets/image3.jpg'
+import Pastors from  '../../assets/njugunas.jpg'
 
 const AboutTwo = () => {
   return (
     <div className='w-4/5 mx-auto items-center grid grid-cols-2 py-20'>
     <div className='grayscale'>
-    <img src={Pastors} alt="" width={500} height={500} />
+    <img src={Pastors} alt="" width={500} height={500} className='flip-horizontal' />
     </div>
 
     <div className='text-center'>
