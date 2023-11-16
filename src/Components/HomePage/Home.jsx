@@ -6,6 +6,7 @@ import GetInvolved from '../Services/GetInvolved'
 import Groups from '../Services/Groups'
 import Giving from '../Services/Giving'
 import Footer from '../Footer/Footer'
+import Events from '../Services/Events'
 
 const Home = () => {
   return (
@@ -13,6 +14,8 @@ const Home = () => {
     <Navbar/>
     <Banner/>
     <About/>
+    <Events/>
+    <div className='w-4/5 mx-auto h-[1px] bg-black/50 my-8'></div>
     <GetInvolved/>
     <Groups/>
     <Giving/>

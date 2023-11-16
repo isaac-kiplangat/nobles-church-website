@@ -1,11 +1,11 @@
 import React from 'react';
 
-const GetInvolved = () => {
+const Events = () => {
   return (
     <div className='w-4/5 mx-auto py-10'>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5'>
         <h2 className='text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-semibold text-center sm:text-left mb-4'>
-          Get Involved
+          Upcoming Events
         </h2>
         <p className='w-full sm:w-2/3 mx-auto text-center sm:text-left'>
           This is how we do community. Wherever you are on your faith journey, there is a place for you to get involved.
@@ -42,4 +42,4 @@ const GetInvolved = () => {
   );
 }
 
-export default GetInvolved;
+export default Events;
