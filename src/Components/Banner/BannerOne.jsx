@@ -8,15 +8,15 @@ const BannerOne = () => {
       <h1 className='text-center uppercase text-4xl sm:text-5xl md:text-6xl font-semibold px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24 pt-6 pb-4 sm:pb-6 w-full text-white mx-auto'>
         Can you give them a message for me?
       </h1>
-      <div className='flex flex-col sm:flex-row w-1/2 items-center gap-4 mx-auto text-white'>
-        <h2 className=' uppercase text-center sm:text-left mx-auto sm:mx-0 mb-4 sm:mb-0'>
+      <div className='flex flex-col sm:flex-row w-1/3  items-center gap-4 mx-auto text-white'>
+        <h2 className=' uppercase text-center md:ml-12 sm:text-left mx-auto sm:mx-0 mb-4 sm:mb-0'>
           Pastor James Njuguna
         </h2>
         <h2 className='text-center sm:text-right'>12.11.2023</h2>
       </div>
-      <div className='md:w-4/5 sm:w-full mx-auto pt-6 sm:pt-10'>
+      <div className='md:w-4/5 sm:w-full md:mx-auto pt-6 sm:mx-4 sm:pt-10'>
         <iframe
-          className='video'
+          className='video md:h-[600px] sm:h-[440px] sm:px-4 md:px-0'
           width='100%'
           height={400}
           title='Youtube player'

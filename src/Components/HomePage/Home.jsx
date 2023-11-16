@@ -15,11 +15,11 @@ const Home = () => {
     <Banner/>
     <About/>
     <Events/>
-    <div className='w-4/5 mx-auto h-[1px] bg-black/50 my-8'></div>
+    <div  classNameName='w-4/5 mx-auto h-[1px] bg-black/50 my-8'></div>
     <GetInvolved/>
     <Groups/>
     <Giving/>
-    <div className='w-4/5 mx-auto h-[1px] bg-black my-8'></div>
+    <div  classNameName='w-4/5 mx-auto h-[1px] bg-black my-8'></div>
     <Footer/>
     </div>
   )
