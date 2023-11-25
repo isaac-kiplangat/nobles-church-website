@@ -1,17 +1,34 @@
 import React, { useState } from 'react';
-import { AiOutlineMenu, AiFillFacebook, AiFillYoutube, AiFillTwitterCircle } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+import { AiOutlineMenu, AiOutlineUser, AiFillFacebook, AiFillYoutube, AiFillTwitterCircle, AiOutlineWhatsApp } from 'react-icons/ai';
 import Logo from '../../assets/logo.jpg';
+import {IoClose} from 'react-icons/io5'
 
 const Navbar = () => {
   const navItems = [
-    { id: 1, name: 'Sunday Service' },
-    { id: 2, name: 'Watch' },
-    { id: 3, name: 'Ministry' },
-    { id: 4, name: 'Get Involved' },
-    { id: 5, name: 'Give' },
+    { 
+      path: '#sunday-service', 
+      name: 'Sunday Service' },
+    { 
+      path: '/watch', 
+      name: 'Watch' },
+    {
+      path: '/ministry', 
+      name: 'Ministry' },
+    { 
+      path: '/get-involved', 
+      name: 'Get Involved' },
+    { 
+      path: '/blog', 
+      name: 'Blog' },
+    {  
+      path: '/give', 
+      name: 'Give' },
+
   ];
 
   const [isModalVisible, setModalVisible] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
 
   const toggleModal = () => {
@@ -21,39 +38,83 @@ const Navbar = () => {
     setModalVisible(false);
   };
 
+  const handleMenu =()=>{
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+
+
   return (
     <div>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+      <nav className="bg-amber-500  border-gray-200 dark:bg-gray-900">
+        <div className="flex flex-wrap justify-between items-center w-4/5 mx-auto max-w-screen-xl py-4">
           <a href="https://flowbite.com" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src={Logo} className="h-8" alt="Flowbite Logo" />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
               Nobles House
             </span>
           </a>
-          <div className="flex items-center space-x-6 rtl:space-x-reverse">
-            <AiFillFacebook size={30} className="text-blue-600" />
-            <AiFillYoutube size={35} className="text-red-600" />
-            <AiFillTwitterCircle size={30} className="text-blue-400 rounded-lg" />
+          <AiOutlineMenu size={30} onClick={handleMenu} className='md:hidden text-white'/>
+          {/**Navbar for smal/mobile screen */}
+          {isMenuOpen && (
+
+       
+          <div className=' fixed md:hidden z-10 w-2/3 h-screen bg-[#FFFFF0] top-0 right-0 border-l border-yellow-400 '>
+              <IoClose size={30} onClick={()=> setIsMenuOpen(false)} className='absolute hover:text-yellow-400 z-40 top-2 right-2 '/>
+
+              <div className="">
+            <ul className=" grid mt-20 text-black font-medium mx-4   text-sm">
+              <hr className='w-full '/>
+              {navItems.map((item, index) => (
+                <li key={index} className='pt-4  text-center hover:bg-yellow-100'>
+                  <Link to={item.path} className="text-black px-4  text-center text-lg hover:underline" >
+                    {item.name}
+                  </Link>
+                  <hr className='w-full mt-4 text-yellow-500'/>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className='w-full px-4 flex justify-around py-4 my-6 items-center'>
+          <AiFillFacebook size={30} className="text-amber-600 hover:text-blue-600" />
+            <AiFillYoutube size={35} className="text-amber-600 hover:text-red-600" />
+            <AiFillTwitterCircle size={30} className="text-amber-600 rounded-lg hover:text-blue-400" />
+            <AiOutlineWhatsApp size={30} className="text-amber-600 rounded-lg hover:text-green-400" />
+          </div>
+          <div className='w-full my-4 px-4 bottom-10'>
+          <button className='w-full bg-amber-400 text-white py-2 text-lg rounded-md hover:bg-blue-900'> Login</button>
+          </div>
+          </div>
+             )}
+
+
+            {/** Navbar for large screen */}
+          <div className="hidden md:flex items-center space-x-6 rtl:space-x-reverse">
+            <AiFillFacebook size={25} className="text-white hover:bg-blue-600" />
+            <AiFillYoutube size={30} className="text-white" />
+            <AiFillTwitterCircle size={25} className="text-white rounded-lg" />
+            <AiOutlineWhatsApp size={25} className="text-white hover:text-green-500 rounded-lg" />
+
             <button
               onClick={toggleModal}
-              className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className=" text-amber-500 bg-[#FCFCF7] hover:bg-amber-100 
+               font-medium flex gap-1 rounded-[4px] text-sm px-4 py-2 text-center"
               type="button"
             >
-              login
+               Login
             </button>
           </div>
         </div>
       </nav>
-      <nav className="bg-gray-50 dark:bg-gray-700">
-        <div className="max-w-screen-xl px-4 py-3 mx-auto">
+      <nav className="bg-[#141a41]">
+        <div className="max-w-screen-xl w-4/5  py-3 mx-auto">
           <div className="flex items-center">
-            <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
+            <ul className=" hidden md:flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
               {navItems.map((item) => (
                 <li key={item.id}>
-                  <a href="#" className="text-gray-900 dark:text-white hover:underline" aria-current="page">
+                  <Link to={item.path} className="text-white hover:underline" aria-current="page">
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

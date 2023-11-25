@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GetInvolved = () => {
+const GetInvolvedComponent = () => {
   return (
     <div  className='w-4/5 mx-auto py-10'>
       <div  className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5'>
@@ -42,4 +42,4 @@ const GetInvolved = () => {
   );
 }
 
-export default GetInvolved;
+export default GetInvolvedComponent;

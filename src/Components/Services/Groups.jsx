@@ -21,9 +21,10 @@ const Groups = () => {
       </div>
 
       {/* Group 2 */}
-      <div style={{ backgroundImage: `url(${NobleKids})` }}  className='text-white'>
-        <div  className='bg-black opacity-60 grid px-6 sm:px-10 py-16'>
-          <h2  className='text-center sm:text-left text-3xl sm:text-5xl font-semibold py-2 sm:py-5'>
+      <div style={{ backgroundImage: `url(${NobleKids})` }} >
+      
+        <div  className='  px-6 block sm:px-10 py-16'>
+          <h2  className='text-center  text-white sm:text-left text-3xl sm:text-5xl font-semibold py-2 sm:py-5'>
             Noble Kids
           </h2>
           <p  className='w-full mx-auto p-2 text-center sm:text-left text-sm sm:text-md'>

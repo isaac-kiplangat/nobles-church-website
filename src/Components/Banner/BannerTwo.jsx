@@ -54,7 +54,7 @@ const BannerTwo = () => {
   }, []);
 
   return (
-    <div className='w-4/5 pb-10 mx-auto text-white'>
+    <div className='w-4/5 pb-10 mx-auto '>
       <h2 className='py-4 text-md font-semibold'>Most Recent</h2>
       {isLoading ? (
         <p>Loading...</p>

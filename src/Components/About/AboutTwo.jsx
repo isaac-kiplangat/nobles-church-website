@@ -9,8 +9,8 @@ const AboutTwo = () => {
       </div>
 
       <div className='text-center sm:text-left sm:py-10'>
-        <h2 className='font-bold text-4xl sm:text-5xl'>Our Pastors</h2>
-        <p className='w-full sm:w-2/3 mx-auto leading-loose break-words px-4 sm:px-0'>
+        <h2 className='font-bold text-4xl py-4 sm:text-5xl text-center'>Our <br/> Pastors</h2>
+        <p className='w-full sm:w-2/3 mx-auto leading-loose break-words text-center px-4 sm:px-0'>
           Our Pastors James and Margaret Njuguna have a passion to reach people through the life-changing message of the gospel. They have given their lives to the mission of the local church and have a vision to see all people know God, find freedom, discover their purpose, and make a difference.
         </p>
       </div>

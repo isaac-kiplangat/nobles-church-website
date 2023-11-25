@@ -4,7 +4,7 @@ import BannerTwo from './BannerTwo'
 
 const Banner = () => {
   return (
-    <div className='bg-black/90'>
+    <div className='bg-white'>
     <BannerOne/>
     <BannerTwo/>
     </div>
